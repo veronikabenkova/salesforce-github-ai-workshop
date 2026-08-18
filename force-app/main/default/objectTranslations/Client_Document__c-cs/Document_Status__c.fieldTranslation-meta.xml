@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Set the current status of this document. This field is not updated automatically. --></help>
+    <label>Stav dokladu</label>
+    <name>Document_Status__c</name>
+    <picklistValues>
+        <masterLabel>Expired</masterLabel>
+        <translation>Prošlý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revoked</masterLabel>
+        <translation>Zrušený</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valid</masterLabel>
+        <translation>Platný</translation>
+    </picklistValues>
+</CustomFieldTranslation>
