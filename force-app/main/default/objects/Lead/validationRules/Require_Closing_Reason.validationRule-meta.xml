@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Closing_Reason</fullName>
+    <active>true</active>
+    <description>Closing Reason must be set before a Lead can be marked Closed Won or Closed Lost.</description>
+    <errorConditionFormula>AND(
+    OR(ISPICKVAL(Status, &quot;Closed Won&quot;), ISPICKVAL(Status, &quot;Closed Lost&quot;)),
+    ISBLANK(TEXT(Closing_Reason__c)),
+    NOT(ISCHANGED(IsConverted))
+)</errorConditionFormula>
+    <errorDisplayField>Closing_Reason__c</errorDisplayField>
+    <errorMessage>Closing Reason is required when the Lead is Closed Won or Closed Lost.</errorMessage>
+</ValidationRule>
